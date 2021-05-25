@@ -45,12 +45,12 @@ cd tf-ob-github
 - Create file `secret.tfvars'
 
 ```bash
-echo "github_token = \"put_your_github_token_here\"" > secret.tfvars
+echo "github_token = \"put_your_github_token_here\"" > secret.auto.tfvars
 ```
 
 Expected command output:
 ```bash
-echo "github_token = \"put_your_github_token_here\"" > secret.tfvars
+echo "github_token = \"put_your_github_token_here\"" > secret.auto.tfvars
 $ 
 ```
 
@@ -105,13 +105,13 @@ commands will detect it and remind you to do so if necessary.
 - In the same folder you were before apply terraform code
 
 ```bash
-terraform apply -var-file="secret.tfvars"
+terraform apply
 ```
 
 Sample result
 
 ```bash
-$ terraform apply -var-file="secret.tfvars"                     
+$ terraform apply                     
 
 An execution plan has been generated and is shown below.
 Resource actions are indicated with the following symbols:
